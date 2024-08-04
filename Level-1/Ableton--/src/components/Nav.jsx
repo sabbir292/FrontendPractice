@@ -2,29 +2,60 @@ import React, { useCallback, useEffect, useState } from 'react';
 import '../index.css';
 import 'boxicons';
 import logo from '../assets/logo.png';
+import DynamicNav from './DynamicNav';
+
+const navData = [
+    {
+      title: "More on Ableton.com",
+      type: "links",
+      items: [
+        { name: "Blog", url: "#blog" },
+        { name: "Ableton for the Classroom", url: "#classroom" },
+        { name: "Ableton for Colleges and Universities", url: "#universities" },
+        { name: "Certified Training", url: "#training" },
+        { name: "About Ableton", url: "#about" },
+        { name: "Jobs", url: "#jobs" },
+        { name: "Apprenticeships", url: "#apprenticeships" }
+      ]
+    },
+    {
+      title: "More from Ableton",
+      type: "featured",
+      items: [
+        {
+          name: "Loop",
+          description: "Watch Talks, Performances and Features from Ableton's Summit for Music Makers",
+          url: "#loop"
+        },
+        {
+          name: "Learning Music",
+          description: "Learn the fundamentals of music making right in your browser.",
+          url: "#learning-music"
+        },
+        {
+          name: "Learning Synths",
+          description: "Get started with synthesis using a web-based synth and accompanying lessons.",
+          url: "#learning-synths"
+        },
+        {
+          name: "Making Music",
+          description: "Some tips from 74 Creative Strategies for Electronic Producers.",
+          url: "#making-music"
+        }
+      ]
+    }
+  ]
+
 
 const Nav = () => {
   const [isMenubarOpen, setIsMenubarOpen] = useState(false);
-  // const [isSmallScreen, setIsSmallScreen] = useState(false)
+  const [isMoreMenubarOpen, setIsMoreMenubarOpen] = useState(false);
 
-  // const checkScreenSize = useCallback(()=>{
-  //   setIsSmallScreen(window.innerWidth < 1024)
-  // }, [])
-
-  // useEffect(()=> {
-  //   checkScreenSize()
-  //   window.addEventListener('resize', checkScreenSize)
-  //   return window.addEventListener('resize', checkScreenSize)
-  // },[checkScreenSize])
-
-  // const toggleMenu = () => {
-  //   console.log(window.innerWidth)
-  //   if(isSmallScreen){
-  //     setIsMenubarOpen(!isMenubarOpen);
-  //   }
-  // };
   const toggleMenu = () => {
     setIsMenubarOpen(!isMenubarOpen); 
+  };
+  const toggleMoreMenu = () => {
+    setIsMoreMenubarOpen(!isMoreMenubarOpen); 
   };
 
   return (
@@ -46,7 +77,9 @@ const Nav = () => {
             }
           </div>
           {/* menu links for sm & md */}
-          <div className={`absolute grid lg:hidden gap-2 left-0 top-0 p-4 z-[-1] bg-textBlue text-white font-semibold w-full transition-all  duration-700 ease-in-out ${isMenubarOpen ? 'max-h-screen pt-20 opacity-100' : 'max-h-0 pt-0 opacity-0'}`}>
+          <div className={`absolute top-0 left-0 pt-20 p-4 w-full h-fit bg-textBlue text-white font-semibold transition-transform duration-500 ease-in-out z-[-1] lg:hidden
+          ${isMenubarOpen ? 'translate-y-0' : '-translate-y-full'}`}
+          >
             <ul className='grid gap-2'>
               <li><a href="#">Live</a></li>
               <li><a href="#">Push</a></li>
@@ -55,14 +88,13 @@ const Nav = () => {
               <li><a href="#">Shop</a></li>
               <li><a href="#">Packs</a></li>
               <li><a href="#">Help</a></li>
-              <li><a href="#">More</a></li>
+              <li><a href="#">More +</a></li>
             </ul>
-            <ul>
+            <ul className='py-6'>
               <li><a href="#">Try Live 12 for free</a></li>
-              <li><a href="#">Log in or register</a></li>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
+              <li className='font-normal'><a href="#">Log in or register</a></li>
             </ul>
+              <DynamicNav navData = {navData} />
           </div>
 
           {/* menu links lg */}
@@ -91,3 +123,23 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
+  // const [isSmallScreen, setIsSmallScreen] = useState(false)
+
+  // const checkScreenSize = useCallback(()=>{
+  //   setIsSmallScreen(window.innerWidth < 1024)
+  // }, [])
+
+  // useEffect(()=> {
+  //   checkScreenSize()
+  //   window.addEventListener('resize', checkScreenSize)
+  //   return window.addEventListener('resize', checkScreenSize)
+  // },[checkScreenSize])
+
+  // const toggleMenu = () => {
+  //   console.log(window.innerWidth)
+  //   if(isSmallScreen){
+  //     setIsMenubarOpen(!isMenubarOpen);
+  //   }
+  // };
