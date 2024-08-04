@@ -55,6 +55,7 @@ const Nav = () => {
     setIsMenubarOpen(!isMenubarOpen); 
   };
   const toggleMoreMenu = () => {
+    console.log('more menu')
     setIsMoreMenubarOpen(!isMoreMenubarOpen); 
   };
 
@@ -106,7 +107,7 @@ const Nav = () => {
             <li><a href="#">Shop</a></li>
             <li><a href="#">Packs</a></li>
             <li><a href="#">Help</a></li>
-            <li className='text-textOrange'><a href="#">More +</a></li>
+            <li onClick={toggleMoreMenu} className='text-textOrange'><a href="#">More +</a></li>
           </ul>
         </div>
       </div>
@@ -118,6 +119,11 @@ const Nav = () => {
           <li className='text-sm font-semibold'><a href="#">Log in or register</a></li>
         </ul>
       </div>
+      <ul className='hidden lg:flex absolute left-0 top-0 w-full px-4 xl:px-10 py-16 z-[-1]'>
+          {
+            isMoreMenubarOpen && <DynamicNav navData={navData}/>
+          }
+      </ul>
     </nav>
   );
 };
