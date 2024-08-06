@@ -10,7 +10,7 @@ const Card1 = () => {
         {/* <div className='bg-black w-full h-full z-20'></div> */}
        </div>
        <div className='bg-bgYello w-full z-30 flex items-center justify-center object-cover'>
-        <img src={img2} alt="" className='w-[70%] aspect-video z-20'/>
+        <img src={img2} alt="" className='w-[70%] aspect-[4/3] z-20'/>
         {/* <div className='bg-black w-full h-full'></div> */}
        </div>
        <div className='bg-bgYello absolute right-0 h-full w-3/5 z-[-1]'></div>

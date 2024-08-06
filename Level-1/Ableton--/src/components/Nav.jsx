@@ -64,11 +64,11 @@ const Nav = () => {
     <nav className={`relative p-4 xl:px-10 lg:font-semibold xl:font-bold lg:flex lg:justify-between lg:items-center`}>
 
       <div className='flex items-center gap-4 lg:gap-12'>
-        <div className='h-12 w-12'>
+        <div className='h-12 w-12 z-20'>
           <img src={logo} alt="Ableton" />
         </div>
         <div className='flex gap-4'>
-          <div className='flex gap-2 relative lg:hidden' onClick={toggleMenu}>
+          <div className='flex gap-2 relative lg:hidden z-20' onClick={toggleMenu}>
             <h3 className={`${isMenubarOpen ? 'text-white' : 'text-black'}`}>Menu</h3>
             {
               !isMenubarOpen ? (
@@ -79,7 +79,7 @@ const Nav = () => {
             }
           </div>
           {/* menu links for sm & md */}
-          <div className={`absolute top-0 left-0 pt-20 p-4 w-full h-fit bg-textBlue text-white font-semibold transition-transform duration-500 ease-in-out z-[-1] lg:hidden
+          <div className={`absolute top-0 left-0 pt-20 p-4 w-full h-fit bg-textBlue text-white font-semibold transition-transform duration-500 ease-in-out z-10 lg:hidden
           ${isMenubarOpen ? 'translate-y-0' : '-translate-y-full'}`}
           >
             <ul className='grid gap-2'>
