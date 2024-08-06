@@ -55,12 +55,13 @@ const Nav = () => {
     setIsMenubarOpen(!isMenubarOpen); 
   };
   const toggleMoreMenu = () => {
-    console.log('more menu')
     setIsMoreMenubarOpen(!isMoreMenubarOpen); 
   };
 
   return (
-    <nav className={`relative p-4 max-w-[100rem] mx-auto xl:px-10 lg:font-semibold xl:font-bold lg:flex lg:justify-between lg:items-center ${!isMenubarOpen ? 'border-b-2 bg-slate-100' : ''}`}>
+    <header className={`lg:border-b-2 max-w-[100rem] mx-auto ${!isMenubarOpen ? 'border-b-2 bg-slate-100' : ''}`}>
+
+    <nav className={`relative p-4 xl:px-10 lg:font-semibold xl:font-bold lg:flex lg:justify-between lg:items-center`}>
 
       <div className='flex items-center gap-4 lg:gap-12'>
         <div className='h-12 w-12'>
@@ -119,12 +120,13 @@ const Nav = () => {
           <li className='text-sm font-semibold'><a href="#">Log in or register</a></li>
         </ul>
       </div>
-      <ul className='hidden lg:flex absolute left-0 top-0 w-full px-4 xl:px-10 py-16 z-[-1]'>
-          {
-            isMoreMenubarOpen && <DynamicNav navData={navData}/>
-          }
-      </ul>
     </nav>
+    <nav className='hidden lg:flex'>
+      {
+        isMoreMenubarOpen && <DynamicNav navData={navData}/>
+      }
+    </nav>
+  </header>
   );
 };
 
@@ -134,18 +136,18 @@ export default Nav;
   // const [isSmallScreen, setIsSmallScreen] = useState(false)
 
   // const checkScreenSize = useCallback(()=>{
-  //   setIsSmallScreen(window.innerWidth < 1024)
-  // }, [])
-
-  // useEffect(()=> {
-  //   checkScreenSize()
-  //   window.addEventListener('resize', checkScreenSize)
-  //   return window.addEventListener('resize', checkScreenSize)
-  // },[checkScreenSize])
-
-  // const toggleMenu = () => {
-  //   console.log(window.innerWidth)
-  //   if(isSmallScreen){
-  //     setIsMenubarOpen(!isMenubarOpen);
-  //   }
-  // };
+    //   setIsSmallScreen(window.innerWidth < 1024)
+    // }, [])
+    
+    // useEffect(()=> {
+      //   checkScreenSize()
+      //   window.addEventListener('resize', checkScreenSize)
+      //   return window.addEventListener('resize', checkScreenSize)
+      // },[checkScreenSize])
+      
+      // const toggleMenu = () => {
+        //   console.log(window.innerWidth)
+        //   if(isSmallScreen){
+          //     setIsMenubarOpen(!isMenubarOpen);
+          //   }
+          // };
