@@ -11,7 +11,7 @@ const Video = () => {
 
     return (
         <div className='w-full max-w-[100rem] bg-white mx-auto'>
-            <div className='relative p-4 md:pb-24 lg:pb-32 mx-auto w-full md:max-w-[40rem] lg:max-w-[50rem]'>
+            <div className='relative p-4 mx-auto w-full md:max-w-[40rem] lg:max-w-[50rem]'>
                 <div className='relative w-full pb-[56.25%]'> {/* 16:9 aspect ratio */}
                     {!playing ? (
                         <div 

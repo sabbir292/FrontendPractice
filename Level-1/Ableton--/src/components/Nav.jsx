@@ -64,8 +64,13 @@ const Nav = () => {
     <nav className={`relative p-4 xl:px-10 lg:font-semibold xl:font-bold lg:flex lg:justify-between lg:items-center`}>
 
       <div className='flex items-center gap-4 lg:gap-12'>
-        <div className='h-12 w-12 z-50'>
-          <img src={logo} alt="Ableton" />
+        <div className='z-50'>
+          {
+            isMenubarOpen? <svg fill="white" width="60" height="60" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.4v11.2h1.6V6.4zm3.2 0v11.2h1.6V6.4zm3.2 0v11.2H8V6.4zm3.2 0v11.2h1.6V6.4zm3.2 0V8H24V6.4zm0 3.2v1.6H24V9.6zm0 3.2v1.6H24v-1.6zm0 3.2v1.6H24V16z"/></svg> 
+            : 
+            <svg fill="#000000" width="60" height="60" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.4v11.2h1.6V6.4zm3.2 0v11.2h1.6V6.4zm3.2 0v11.2H8V6.4zm3.2 0v11.2h1.6V6.4zm3.2 0V8H24V6.4zm0 3.2v1.6H24V9.6zm0 3.2v1.6H24v-1.6zm0 3.2v1.6H24V16z"/></svg>
+          }
+        
         </div>
         <div className='flex gap-4'>
           <div className='flex gap-2 relative lg:hidden z-50 cursor-pointer' onClick={toggleMenu}>

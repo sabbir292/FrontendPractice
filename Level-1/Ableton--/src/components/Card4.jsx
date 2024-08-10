@@ -2,7 +2,7 @@ import React from 'react'
 import img8 from '../assets/photo-8.jpg';
 const Card4 = () => {
   return (
-    <section className='grid sm:grid-rows-5 lg:grid-cols-2 lg:grid-rows-1 max-w-[100rem] mx-auto px-4 md:px-16 bg-white'>
+    <section className='grid sm:grid-rows-5 lg:grid-cols-2 lg:grid-rows-1 max-w-[100rem] mx-auto px-4 md:px-16 bg-white py-12 lg:pb-24'>
         <div className='sm:row-span-3 object-cover '>
             <img src={img8} alt="" className='w-full'/>
         </div>

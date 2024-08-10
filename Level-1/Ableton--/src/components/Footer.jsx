@@ -25,7 +25,7 @@ const Footer = () => {
 
                     <h4 className='flex items-center'>
                         About Ableton
-                        <box-icon size='xs' name='chevron-right'></box-icon>
+                        <box-icon size='xs' name='chevron-right' ></box-icon>
                     </h4>
 
                     <h4 className='flex items-center'>
