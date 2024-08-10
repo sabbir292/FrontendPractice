@@ -59,16 +59,16 @@ const Nav = () => {
   };
 
   return (
-    <header className={`lg:border-b-2 max-w-[100rem] mx-auto ${!isMenubarOpen ? 'border-b-2 bg-slate-100' : ''}`}>
+    <header className={`lg:border-b-[1px] max-w-[100rem] mx-auto ${!isMenubarOpen ? 'border-b-[1px] bg-white' : ''}`}>
 
     <nav className={`relative p-4 xl:px-10 lg:font-semibold xl:font-bold lg:flex lg:justify-between lg:items-center`}>
 
       <div className='flex items-center gap-4 lg:gap-12'>
-        <div className='h-12 w-12 z-20'>
+        <div className='h-12 w-12 z-50'>
           <img src={logo} alt="Ableton" />
         </div>
         <div className='flex gap-4'>
-          <div className='flex gap-2 relative lg:hidden z-20' onClick={toggleMenu}>
+          <div className='flex gap-2 relative lg:hidden z-50 cursor-pointer' onClick={toggleMenu}>
             <h3 className={`${isMenubarOpen ? 'text-white' : 'text-black'}`}>Menu</h3>
             {
               !isMenubarOpen ? (
@@ -79,7 +79,7 @@ const Nav = () => {
             }
           </div>
           {/* menu links for sm & md */}
-          <div className={`absolute top-0 left-0 pt-20 p-4 w-full h-fit bg-textBlue text-white font-semibold transition-transform duration-500 ease-in-out z-10 lg:hidden
+          <div className={`absolute top-0 left-0 pt-20 p-4 w-full h-fit bg-textBlue text-white font-semibold transition-transform duration-500 ease-in-out z-40 lg:hidden
           ${isMenubarOpen ? 'translate-y-0' : '-translate-y-full'}`}
           >
             <ul className='grid gap-2'>

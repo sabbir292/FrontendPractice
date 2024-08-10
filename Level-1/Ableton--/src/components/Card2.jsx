@@ -1,18 +1,19 @@
 import React from 'react'
-import img1 from '../assets/makingmusic.jpg';
-import img2 from '../assets/girlinoffice.jpg';
+import img3 from '../assets/photo-3.jpg';
+import img4 from '../assets/photo-4.jpg';
+import img5 from '../assets/photo-5.jpg';
 
 const Card2 = () => {
     return (
-        <section className="flex relative h-fit w-full box-border max-w-[100rem] mx-auto z-[-2]">
-            <div className='w-full z-30 flex flex-col gap-8 items-center justify-center object-cover'>
-                <img src={img2} alt="" className='w-[70%] aspect-[4/3] z-20' />
-                <img src={img2} alt="" className='w-[70%] aspect-[4/3] z-20' />
+        <section className="flex relative h-fit w-full box-border max-w-[100rem] mx-auto z-10 bg-white">
+            <div className='p-4 md:p-16 w-full z-30 flex flex-col gap-4 md:gap-16 items-center justify-center object-cover'>
+                <img src={img3} alt="" className='w-full aspect-[4/3] z-20' />
+                <img src={img4} alt="" className='w-full aspect-[4/3] object-cover z-20' />
                 {/* <div className='bg-black w-full h-full'></div> */}
             </div>
 
-            <div className='w-full py-12 lg:py-36 flex items-center object-cover'>
-                <img src={img1} alt="" className='bg-black z-20 aspect-square' />
+            <div className='w-full pr-4 md:pr-16 flex items-center object-cover'>
+                <img src={img5} alt="" className='w-full bg-black z-20 aspect-square' />
                 {/* <div className='bg-black w-full h-full z-20'></div> */}
             </div>
 

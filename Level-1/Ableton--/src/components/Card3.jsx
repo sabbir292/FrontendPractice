@@ -1,17 +1,17 @@
 import React from 'react'
-import img1 from '../assets/makingmusic.jpg';
-import img2 from '../assets/girlinoffice.jpg';
+import img6 from '../assets/photo-6.jpg';
+import img7 from '../assets/photo-7.jpg';
 
 const Card3 = () => {
     return (
-        <section className="flex gap-10 relative h-fit w-full box-border max-w-[100rem] mx-auto z-[-2] overflow-hidden">
-            <div className='w-full z-30 flex items-center justify-center object-cover'>
-                <img src={img2} alt="" className='w-[70%] aspect-[4/3] z-20' />
+        <section className="flex gap-12 md:gap-28 relative h-fit w-full box-border max-w-[100rem] mx-auto overflow-hidden py-12 md:py-24 z-10 bg-white">
+            <div className='w-full z-30 flex items-center justify-center object-cover px-4 md:px-16'>
+                <img src={img6} alt="" className='w-full aspect-[4/3] z-20' />
                 {/* <div className='bg-black w-full h-full'></div> */}
             </div>
 
-            <div className='w-full py-8 lg:py-32 flex items-center object-cover'>
-                <img src={img1} alt="" className='bg-black z-20 aspect-square' />
+            <div className='w-full flex items-center object-cover'>
+                <img src={img7} alt="" className='w-full bg-black z-20 aspect-square' />
                 {/* <div className='bg-black w-full h-full z-20'></div> */}
             </div>
 

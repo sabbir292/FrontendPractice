@@ -20,6 +20,9 @@ module.exports = {
             textBlue: '#0000ff',
             textOrange: '#ff764d'
         },
+        backgroundImage: {
+          'header': "url('./assets/header.avif')",
+        },
       },
     },
     plugins: [],
